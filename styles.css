@@ -7,6 +7,7 @@
 .holder{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .button-style{
     display: flex;
@@ -17,8 +18,14 @@
     border-radius: 25px;
     justify-content: center;
     margin: 50px;
+    margin-bottom: 20px;
 }
-
+.button-info{
+    text-align: center;
+    font-style: italic;
+    color: rgb(84, 84, 84);
+    max-width: 300px;
+}
 .heading{
     margin: 60px;
     text-align: center;
