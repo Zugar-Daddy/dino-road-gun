@@ -29,13 +29,62 @@
 .heading{
     margin: 60px;
     text-align: center;
-    font-size: 56px;
-    padding: 15px;
+    font-size: 60px;
+    padding: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 900;
     color: black;
-    /* background-color: aqua; */
+    background-color: rgba(255, 127, 80, 0.103);
     border-radius: 135px;
-    border: 10px dotted lightcoral;
+    border: 15px double lightcoral;
 }
 
+.score-box-container{
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    color: black;
+    background-color: rgba(255, 127, 80, 0.103);
+    border-radius: 15px;
+    border: 5px solid lightcoral;
+    padding: 20px;
+    width:fit-content;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 250px;
+}
+
+.score-box-computer, .score-box-human{
+    border-radius: 15px;
+    border: 5px solid yellowgreen;
+    padding: 15px;
+    background-color: aliceblue;
+    margin: 25px;
+    font-size: 35px;
+}
+
+.result-text{
+    border-radius: 15px;
+    border: 5px solid yellowgreen;
+    padding: 15px;
+    background-color: aliceblue;
+    margin: 25px;
+    font-size: 20px;
+    width: fit-content;
+    margin: auto;
+}
+
+.footer{
+    display: flex;
+    background-color: coral;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    margin-top: 200px;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
