@@ -2,7 +2,13 @@ console.log("hello worlds");
 
 let humanScore = 0;
 let computerScore = 0;
+
 // 1-> Dino, 2-> Road, 3-> Gun
+let choices = ['Dino 🦖', 'Road 🛣️', 'Gun 🔫'];
+
+let humanChoice = 1;
+let pc = 1;
+
 
 // 1 vs 2 -> 1 wins
 // 2 vs 3 -> 2 wins
@@ -24,6 +30,7 @@ function getComputerChoice(){
 // 0-> pc, 1-> human, 2-> draw
 function giveResult(val){
     const doc = document.getElementsByClassName("result-text")[0];
+    const summary_doc = document.getElementsByClassName("summary-text")[0];
     if(val == 0){
         doc.innerHTML = "OOFF, PC WON :(";
     }
@@ -33,6 +40,9 @@ function giveResult(val){
     else if(val == 2){
         doc.innerHTML = "DRAWWWW :/";
     }
+
+    summary_doc.innerHTML = `-> You chose ${choices[humanChoice-1]} <br>-> Computer chose ${choices[pc-1]}`
+
 }
 
 function updateWinner(humanwin){
@@ -44,11 +54,12 @@ function updateWinner(humanwin){
         document.getElementsByClassName("score-box-computer")[0].innerHTML = `Computer Score: ${computerScore}`;
         giveResult(0);
 
-    }
+    }    
 }
 
 function GameResult(human){
-    let pc = getComputerChoice();
+    pc = getComputerChoice();
+    humanChoice = human;
     let hwin = false;
     if(human == pc){
         giveResult(2);
